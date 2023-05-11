@@ -1,0 +1,15 @@
+/* Tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+*::-webkit-scrollbar {
+  @apply h-1 w-1
+}
+*::-webkit-scrollbar-track {
+  @apply bg-white
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-neutral-500 rounded-sm
+}

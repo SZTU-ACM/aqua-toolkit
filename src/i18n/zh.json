@@ -1,0 +1,63 @@
+{
+  "common": {
+    "clickToUpload": "点击上传",
+    "orDragAndDrop": "或拖拽上传"
+  },
+  "index": {
+    "title": "Aqua 工具箱",
+    "stGen": "座位生成器",
+    "dynRnk": "动态榜",
+    "resolver": "滚榜器"
+  },
+  "stGen": {
+    "back": "返回",
+    "showRndCode": "展示随机代码",
+    "import": "导入",
+    "reset": "重置",
+    "gen": "开始生成",
+    "stop": "停止",
+    "genBySeed": "用指定种子生成",
+    "genForSel": "为选择队伍生成",
+    "export": "导出",
+    "seed": "种子",
+    "order": "次序",
+    "plsImport": "请导入数据",
+    "importTeam": "导入队伍",
+    "importRoom": "导入房间",
+    "delete": "删除",
+    "exportText": "下载纯文本",
+    "exportCsv": "下载 CSV 文件",
+    "exportJson": "下载 JSON 文件",
+    "exportYaml": "下载 YAML 文件"
+  },
+  "resolver": {
+    "back": "返回",
+    "setRemoteParam": "设置远程参数",
+    "idList": "比赛 ID 列表",
+    "noPrefetch": "数据未预载",
+    "lastPrefetchOn": "上次预载时间: ",
+    "name": "比赛名称",
+    "startTime": "开始时间",
+    "endTime": "结束时间",
+    "frozenTime": "封榜时间",
+    "goldCount": "金牌数",
+    "silverCount": "银牌数",
+    "bronzeCount": "铜牌数",
+    "mode": "排名模式",
+    "modeRegular": "常规模式",
+    "modeGlobal": "全局模式",
+    "teamFilter": "队伍过滤器",
+    "teamOfficial": "正式队",
+    "teamGirl": "女生队",
+    "teamUnofficial": "非正式队",
+    "schoolFilter": "学校过滤器",
+    "preprocess": "预处理",
+    "start": "开始滚榜",
+    "noPreprocess": "尚未预处理",
+    "lastPreprocessOn": "上次预处理时间: ",
+    "champion": "冠军",
+    "gold": "金牌",
+    "silver": "银牌",
+    "bronze": "铜牌"
+  }
+}

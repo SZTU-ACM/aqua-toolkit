@@ -1,0 +1,63 @@
+{
+  "common": {
+    "clickToUpload": "Click to upload",
+    "orDragAndDrop": " or drag and drop"
+  },
+  "index": {
+    "title": "Aqua Toolkit",
+    "stGen": "Seats Generator",
+    "dynRnk": "Dynamic Rank",
+    "resolver": "Resolver"
+  },
+  "stGen": {
+    "back": "Back",
+    "showRndCode": "Show Random Code",
+    "import": "Import",
+    "reset": "Reset",
+    "gen": "Generate",
+    "stop": "Stop",
+    "genBySeed": "Generate By Seed",
+    "genForSel": "Generate For Selected",
+    "export": "Export",
+    "seed": "Seed",
+    "order": "Order",
+    "plsImport": "Please Import Data",
+    "importTeam": "Import teams",
+    "importRoom": "Import rooms",
+    "delete": "Delete",
+    "exportText": "Download Plain Text",
+    "exportCsv": "Download CSV",
+    "exportJson": "Download JSON",
+    "exportYaml": "Download YAML"
+  },
+  "resolver": {
+    "back": "Back",
+    "setRemoteParam": "Set Remote Parameters",
+    "idList": "Contest ID list",
+    "noPrefetch": "Not prefetched yet",
+    "lastPrefetchOn": "Last prefetched on: ",
+    "name": "Contest name",
+    "startTime": "Start time",
+    "endTime": "End time",
+    "frozenTime": "Frozen time",
+    "goldCount": "Gold count",
+    "silverCount": "Silver count",
+    "bronzeCount": "Brozen count",
+    "mode": "Mode",
+    "modeRegular": "Regular",
+    "modeGlobal": "Global",
+    "teamFilter": "Team filter",
+    "teamOfficial": "Official",
+    "teamGirl": "Girl",
+    "teamUnofficial": "Unofficial",
+    "schoolFilter": "School filter",
+    "preprocess": "Preprocess",
+    "start": "Start",
+    "noPreprocess": "Not preprocessed yet",
+    "lastPreprocessOn": "Last preprocessed on: ",
+    "champion": "Champion",
+    "gold": "Gold",
+    "silver": "Silver",
+    "bronze": "Bronze"
+  }
+}
