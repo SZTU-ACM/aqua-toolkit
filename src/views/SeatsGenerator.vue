@@ -96,7 +96,7 @@
       <table class="text-center w-full">
         <tr v-for="(i, idx) in main.teamList" @click="main.selectRow(idx)" class="even:bg-blue-950 hover:bg-purple-700 odd:bg-blue-800" :class="main.selectedRowClass(idx)">
           <td class="w-16">{{ idx + 1 }}</td>
-          <td class="w-1/4">{{ (i[4] === '1' ? '*' : '') + i[0] }}</td>
+          <td class="w-1/4" :class="i[4] === '1' ? 'text-pink-300' : ''">{{ (i[4] === '2' ? '*' : '') + i[0] }}</td>
           <td class="w-1/6">{{ i[1] }}</td>
           <td class="w-1/4">{{ i[2] }}</td>
           <td class="w-1/6">{{ i[3] }}</td>
