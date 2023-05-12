@@ -3,7 +3,7 @@ import { MT19937 } from './mt19937'
 import _ from 'lodash'
 
 // Shuffle all (Fisher-Yates shuffle)
-const shuffle = (seed: number, arr: any[])=>{
+export const shuffle = (seed: number, arr: any[]): void=>{
   const rnd = new MT19937(seed)
 
   for (let i = arr.length - 1; i > 0; --i) {
@@ -21,8 +21,34 @@ const shuffle = (seed: number, arr: any[])=>{
   }
 }
 
+// School spread
+export const spread = (arr: { id: string, room: string, school: string }[]): void=>{
+  const tmp = arr.map((x, y)=>({ idx: y, id: x.id, school: x.school }))
+  tmp.sort((a, b)=>a.id < b.id ? -1 : 1)
+
+  for (let i = 1; i < tmp.length; ++i) {
+    if (tmp[i].school === tmp[i - 1].school) {
+      for (let j = 1; (i + j) % tmp.length !== i; ++j) {
+        if (tmp[i].school !== tmp[(i + j) % tmp.length].school && 
+            tmp[i].school !== tmp[(i + j + 1) % tmp.length].school && 
+            tmp[i].school !== tmp[(i + j + 2) % tmp.length].school
+        ) {
+          let t: any = arr[tmp[i].idx]
+          arr[tmp[i].idx] = arr[tmp[(i + j + 1) % tmp.length].idx]
+          arr[tmp[(i + j + 1) % tmp.length].idx] = t
+
+          t = tmp[i]
+          tmp[i] = tmp[(i + j + 1) % tmp.length]
+          tmp[(i + j + 1) % tmp.length] = tmp[i]
+          break
+        }
+      }
+    }
+  }
+}
+
 // Select one
-class SelectOne {
+export class SelectOne {
   seed: number
   arr: any[]
   acc: number = 0
@@ -32,7 +58,7 @@ class SelectOne {
     this.arr = _.cloneDeep(arr)
   }
 
-  select() {
+  select(): [number, any] {
     // Shuffle & accumulate
     shuffle(this.seed, this.arr)
     this.acc++
@@ -40,6 +66,3 @@ class SelectOne {
     return [this.acc, this.arr.pop()]
   }
 }
-
-// Export
-export { shuffle, SelectOne }

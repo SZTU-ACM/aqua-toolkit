@@ -1,7 +1,7 @@
 /* Seats generator store */
 import { defineStore } from 'pinia'
 import { toText, toCsv, toJson, toYaml, download } from '../api/file'
-import { shuffle, SelectOne } from '../api/shuffle'
+import { shuffle, spread, SelectOne } from '../api/shuffle'
 import _ from 'lodash'
 import Papa from 'papaparse'
 
@@ -116,8 +116,8 @@ export const useStGenStore = defineStore('stGen', {
       this.selOrd = null
       this.selCls = null
     },
-    genRoomIdList() {
-      let ls: any[][] = _.range((this.teamList as string[][]).length).map((x)=>[x.toString().padStart(3, '0'), ''])
+    genRoomIdList(): string[][] {
+      let ls: any[][] = _.range(1, (this.teamList as string[][]).length + 1).map((x)=>[x.toString().padStart(3, '0'), ''])
       if (this.roomList !== null) {
         const tmp = this.roomList.reduce((lst, cur)=>{
           lst.push(...new Array(parseInt(cur[1])).fill(cur[0]))
@@ -137,6 +137,16 @@ export const useStGenStore = defineStore('stGen', {
         clearInterval(this.animation)
         this.animation = null
         this.mode = null
+
+        const ls = this.genRoomIdList()
+
+        this.reGenSeed()
+        shuffle(this.seed, ls)
+
+        const tmp = ls.map((x, y)=>({ id: x[0], room: x[1], school: (this.teamList as string[][])[y][1] }))
+        spread(tmp)
+
+        this.workList = tmp.map((x)=>[x.id, x.room])
         return
       }
 
@@ -170,7 +180,11 @@ export const useStGenStore = defineStore('stGen', {
         this.mode = null
 
         shuffle(this.seed, ls)
-        this.workList = ls
+
+        const tmp = ls.map((x, y)=>({ id: x[0], room: x[1], school: (this.teamList as string[][])[y][1] }))
+        spread(tmp)
+
+        this.workList = tmp.map((x)=>[x.id, x.room])
       }, 1000)
     },
     selectRow(idx: number) {
@@ -208,6 +222,7 @@ export const useStGenStore = defineStore('stGen', {
         l.push(y[1], ...x.slice(x.length - 2))
         return l
       })
+      ret.sort((a, b)=>a[0] < b[0] ? -1 : 1)
 
       const cols = ['id', 'name', 'school', 'members', 'coach', 'room', 'type', 'tag']
       switch (type) {
