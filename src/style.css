@@ -1,0 +1,27 @@
+/* Tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global style */
+*::-webkit-scrollbar {
+  @apply w-1 h-1
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-neutral-500 rounded-md
+}
+*::-webkit-scrollbar-track {
+  @apply bg-neutral-100 rounded-md
+}
+
+body {
+  @apply bg-slate-900 text-white
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  @apply appearance-none m-0
+}

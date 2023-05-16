@@ -1,0 +1,34 @@
+{
+  "common": {
+    "clickToUpload": "Click to upload",
+    "orDragAndDrop": " or drag and drop"
+  },
+  "index": {
+    "title": "Aqua Toolkit",
+    "seatsGenerator": "Seats Generator",
+    "dynamicRank": "Dynamic Rank",
+    "resolver": "Resolver"
+  },
+  "seatsGenerator": {
+    "title": "Seats Generator",
+    "plsImportData": "Please Import Data",
+    "back": "Back",
+    "showRandomCode": "Show Random Code",
+    "dataImport": "Import",
+    "reset": "Reset",
+    "generate": "Generate",
+    "stop": "Stop",
+    "generateBySeed": "Generate By Seed",
+    "generateForSelected": "Generate For Selected",
+    "export": "Export",
+    "uploadTeam": "Upload team data",
+    "uploadRoom": "Upload room data",
+    "delete": "Delete data",
+    "downloadCsv": "Download CSV",
+    "downloadJson": "Download Json",
+    "downloadYaml": "Download Yaml",
+    "downloadText": "Download plain text",
+    "seed": "Seed",
+    "order": "Order"
+  }
+}
