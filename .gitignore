@@ -7,14 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Node files
 node_modules
 dist
 dist-ssr
 *.local
-
-# Lock files
-pnpm-lock.yaml
 
 # Editor directories and files
 .vscode/*
