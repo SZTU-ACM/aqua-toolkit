@@ -14,6 +14,12 @@
 2. Dynamic rank
 3. Resolver
 
+## Usage
+
+Before you deploy it, you need to **implement some APIs for your online judge**.
+
+APIs are defined in repo's [wiki](https://github.com/SZTU-ACM/aqua-toolkit/wiki/Remote-API-definition)
+
 ## Build
 
 1. Clone this repo
